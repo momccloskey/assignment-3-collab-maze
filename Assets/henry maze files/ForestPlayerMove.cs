@@ -1,7 +1,6 @@
-using JetBrains.Annotations;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class ForestPlayerMove : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -14,12 +13,11 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         Vector3 move = Vector3.zero;
-
         if (Input.GetKey(KeyCode.W))
         {
             move += Vector3.forward;
         }
-        if (Input.GetKey(KeyCode.S)) 
+        if (Input.GetKey(KeyCode.S))
         {
             move += Vector3.back;
         }
@@ -35,8 +33,6 @@ public class PlayerMovement : MonoBehaviour
         {
             move += Vector3.up;
         }
-        
-        
 
         transform.Translate(move * moveSpeed * Time.deltaTime);
     }
