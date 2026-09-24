@@ -1,5 +1,6 @@
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ForestWinCon : MonoBehaviour
 {
@@ -34,6 +35,7 @@ public class ForestWinCon : MonoBehaviour
 void WinGame()
     {
         Debug.Log("You Win!");
+        SceneManager.LoadScene("seal maze game");
     }
 }
 
